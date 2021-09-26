@@ -1,5 +1,4 @@
 from linkedList import linkedList
-import random
 def nthNodeFrmEnd(linkedList):
     n=int(input("enter the required node number from end\n"))
     fast=linkedList.head
@@ -16,12 +15,8 @@ def nthNodeFrmEnd(linkedList):
     return slow.data
 
 if __name__=='__main__':
-    lst=[]
-    num=int(input("enter length of list to populate\n"))
-    for i in range(num):
-        lst.append(random.randint(1,100))
     myLinkedList=linkedList()
-    myLinkedList.buildLinkedList(lst)
+    myLinkedList.buildLinkedList()
     print("the list created is - ")
     print(myLinkedList)
     print(nthNodeFrmEnd(myLinkedList))

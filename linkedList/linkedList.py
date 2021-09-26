@@ -1,4 +1,5 @@
 from linkedListNode import linkedListNode
+import random
 class linkedList:
     '''
     declare constructor
@@ -23,7 +24,11 @@ class linkedList:
     '''
     define function to build linked list from input
     '''
-    def buildLinkedList(self,lst):
+    def buildLinkedList(self):
+        lst=[]
+        num=int(input("enter length of list to populate\n"))
+        for i in range(num):
+            lst.append(random.randint(1,100))
         node=None
         for i in range(len(lst)):
             if i==0:    
@@ -35,11 +40,7 @@ class linkedList:
                 self.len+=1
                 node=node.next
 if __name__=='__main__':
-    lst=[]
-    num=int(input("enter length of list to populate\n"))
-    for i in range(num):
-        lst.append(random.randint(1,100))
     myLinkedList=linkedList()
-    myLinkedList.buildLinkedList(lst)
+    myLinkedList.buildLinkedList()
     print(myLinkedList)
 
