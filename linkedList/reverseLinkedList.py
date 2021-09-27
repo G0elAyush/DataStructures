@@ -21,7 +21,13 @@ def reverseLinkedListRecursion(linkedList,node):
             node.next=None 
         reverseLinkedListRecursion(linkedList,right)
     
-    
+def printLinkedListFromEnd(linkedList):
+        node=linkedList.head
+        if not node:
+            return
+        linkedList.head=node.next
+        printLinkedListFromEnd(linkedList)
+        print(node.data)
 if __name__=='__main__':
     myLinkedList=linkedList()
     myLinkedList.buildLinkedList()
@@ -30,3 +36,4 @@ if __name__=='__main__':
     print(myLinkedList)    
     reverseLinkedListRecursion(myLinkedList,myLinkedList.head)
     print(myLinkedList)
+    printLinkedListFromEnd(myLinkedList)
