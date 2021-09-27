@@ -1,5 +1,8 @@
 from linkedList import linkedList
 import random
+'''
+    this function create a loop in snake type linked list randomly
+'''
 def createLoop(linkedList):
     print("creating loop in the linked list")
     num=random.randint(1,linkedList.len-1)
@@ -20,6 +23,9 @@ def createLoop(linkedList):
         node= node.next
     print("loopEnd="+str(node.data))
     print("\n")
+''' function detect if the given linked list is null terminated or there exist a loop.
+    If there is is a loop it returns the start node and size of loop
+'''
 def detectCycle(linkedList):
     slow=linkedList.head
     if not slow or not slow.next:

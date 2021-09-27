@@ -1,4 +1,7 @@
 from linkedList import linkedList
+''' This funciton return the nth node from the end of the linked list.
+    return "required node does not exist" if such node does not exist"
+'''
 def nthNodeFrmEnd(linkedList):
     n=int(input("enter the required node number from end\n"))
     fast=linkedList.head
